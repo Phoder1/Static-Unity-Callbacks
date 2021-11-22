@@ -1,0 +1,14 @@
+{
+	"name": "com.alontalmi.unitycallbacks",
+	"version": "1.0.0",
+	"displayName": "Static Unity Callbacks",
+	"description": "A static way to call methods on Unity's update, using the GameLoop class.",
+	"unity": "2020.3",
+	"keywords": [
+	],
+	"author": {
+		"name": "Alon Talmi",
+		"email": "alontalmi@protonmail.com",
+		"url": "https://github.com/Phoder1"
+	}
+}
