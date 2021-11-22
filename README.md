@@ -17,125 +17,124 @@ But it does support CustomYieldInstruction and AsyncOperation, so some conversio
  
  Entire Unity callbacks tree (can also be seen inside the post, but was copied here for comfort, also notice this was created by TheBeardedPhantom and might not be updated to the latest version, post was made at Feb 5th, 2020):
  
- ROOT NODE
-    Initialization
-        PlayerUpdateTime
-        AsyncUploadTimeSlicedUpdate
-        SynchronizeInputs
-        SynchronizeState
-        XREarlyUpdate
-    EarlyUpdate
-        PollPlayerConnection
-        ProfilerStartFrame
-        GpuTimestamp
-        UnityConnectClientUpdate
-        CloudWebServicesUpdate
-        UnityWebRequestUpdate
-        ExecuteMainThreadJobs
-        ProcessMouseInWindow
-        ClearIntermediateRenderers
-        ClearLines
-        PresentBeforeUpdate
-        ResetFrameStatsAfterPresent
-        UpdateAllUnityWebStreams
-        UpdateAsyncReadbackManager
-        UpdateTextureStreamingManager
-        UpdatePreloading
-        RendererNotifyInvisible
-        PlayerCleanupCachedData
-        UpdateMainGameViewRect
-        UpdateCanvasRectTransform
-        UpdateInputManager
-        ProcessRemoteInput
-        XRUpdate
-        TangoUpdate
-        ScriptRunDelayedStartupFrame
-        UpdateKinect
-        DeliverIosPlatformEvents
-        DispatchEventQueueEvents
-        DirectorSampleTime
-        PhysicsResetInterpolatedTransformPosition
-        NewInputBeginFrame
-        SpriteAtlasManagerUpdate
-        PerformanceAnalyticsUpdate
-    FixedUpdate
-        ClearLines
-        NewInputEndFixedUpdate
-        DirectorFixedSampleTime
-        AudioFixedUpdate
-        ScriptRunBehaviourFixedUpdate
-        DirectorFixedUpdate
-        LegacyFixedAnimationUpdate
-        XRFixedUpdate
-        PhysicsFixedUpdate
-        Physics2DFixedUpdate
-        DirectorFixedUpdatePostPhysics
-        ScriptRunDelayedFixedFrameRate
-        ScriptRunDelayedTasks
-        NewInputBeginFixedUpdate
-    PreUpdate
-        PhysicsUpdate
-        Physics2DUpdate
-        CheckTexFieldInput
-        IMGUISendQueuedEvents
-        NewInputUpdate
-        SendMouseEvents
-        AIUpdate
-        WindUpdate
-        UpdateVideo
-    Update
-        ScriptRunBehaviourUpdate
-        ScriptRunDelayedDynamicFrameRate
-        DirectorUpdate
-    PreLateUpdate
-        AIUpdatePostScript
-        DirectorUpdateAnimationBegin
-        LegacyAnimationUpdate
-        DirectorUpdateAnimationEnd
-        DirectorDeferredEvaluate
-        UpdateNetworkManager
-        UpdateMasterServerInterface
-        UNetUpdate
-        EndGraphicsJobsLate
-        ParticleSystemBeginUpdateAll
-        ScriptRunBehaviourLateUpdate
-        ConstraintManagerUpdate
-    PostLateUpdate
-        PlayerSendFrameStarted
-        DirectorLateUpdate
-        ScriptRunDelayedDynamicFrameRate
-        PhysicsSkinnedClothBeginUpdate
-        UpdateCanvasRectTransform
-        PlayerUpdateCanvases
-        UpdateAudio
-        ParticlesLegacyUpdateAllParticleSystems
-        ParticleSystemEndUpdateAll
-        UpdateCustomRenderTextures
-        UpdateAllRenderers
-        EnlightenRuntimeUpdate
-        UpdateAllSkinnedMeshes
-        ProcessWebSendMessages
-        SortingGroupsUpdate
-        UpdateVideoTextures
-        UpdateVideo
-        DirectorRenderImage
-        PlayerEmitCanvasGeometry
-        PhysicsSkinnedClothFinishUpdate
-        FinishFrameRendering
-        BatchModeUpdate
-        PlayerSendFrameComplete
-        UpdateCaptureScreenshot
-        PresentAfterDraw
-        ClearImmediateRenderers
-        PlayerSendFramePostPresent
-        UpdateResolution
-        InputEndFrame
-        TriggerEndOfFrameCallbacks
-        GUIClearEvents
-        ShaderHandleErrors
-        ResetInputAxis
-        ThreadedLoadingDebug
-        ProfilerSynchronizeStats
-        MemoryFrameMaintenance
-        ExecuteGameCenterCallbacks
-        ProfilerEndFrame
+    #Initialization
+    - PlayerUpdateTime
+    - AsyncUploadTimeSlicedUpdate
+    - SynchronizeInputs
+    - SynchronizeState
+    - XREarlyUpdate
+    #EarlyUpdate
+    - PollPlayerConnection
+    - ProfilerStartFrame
+    - GpuTimestamp
+    - UnityConnectClientUpdate
+    - CloudWebServicesUpdate
+    - UnityWebRequestUpdate
+    - ExecuteMainThreadJobs
+    - ProcessMouseInWindow
+    - ClearIntermediateRenderers
+    - ClearLines
+    - PresentBeforeUpdate
+    - ResetFrameStatsAfterPresent
+    - UpdateAllUnityWebStreams
+    - UpdateAsyncReadbackManager
+    - UpdateTextureStreamingManager
+    - UpdatePreloading
+    - RendererNotifyInvisible
+    - PlayerCleanupCachedData
+    - UpdateMainGameViewRect
+    - UpdateCanvasRectTransform
+    - UpdateInputManager
+    - ProcessRemoteInput
+    - XRUpdate
+    - TangoUpdate
+    - ScriptRunDelayedStartupFrame
+    - UpdateKinect
+    - DeliverIosPlatformEvents
+    - DispatchEventQueueEvents
+    - DirectorSampleTime
+    - PhysicsResetInterpolatedTransformPosition
+    - NewInputBeginFrame
+    - SpriteAtlasManagerUpdate
+    - PerformanceAnalyticsUpdate
+    #FixedUpdate
+    - ClearLines
+    - NewInputEndFixedUpdate
+    - DirectorFixedSampleTime
+    - AudioFixedUpdate
+    - ScriptRunBehaviourFixedUpdate
+    - DirectorFixedUpdate
+    - LegacyFixedAnimationUpdate
+    - XRFixedUpdate
+    - PhysicsFixedUpdate
+    - Physics2DFixedUpdate
+    - DirectorFixedUpdatePostPhysics
+    - ScriptRunDelayedFixedFrameRate
+    - ScriptRunDelayedTasks
+    - NewInputBeginFixedUpdate
+    #PreUpdate
+    - PhysicsUpdate
+    - Physics2DUpdate
+    - CheckTexFieldInput
+    - IMGUISendQueuedEvents
+    - NewInputUpdate
+    - SendMouseEvents
+    - AIUpdate
+    - WindUpdate
+    - UpdateVideo
+    #Update
+    - ScriptRunBehaviourUpdate
+    - ScriptRunDelayedDynamicFrameRate
+    - DirectorUpdate
+    #PreLateUpdate
+    - AIUpdatePostScript
+    - DirectorUpdateAnimationBegin
+    - LegacyAnimationUpdate
+    - DirectorUpdateAnimationEnd
+    - DirectorDeferredEvaluate
+    - UpdateNetworkManager
+    - UpdateMasterServerInterface
+    - UNetUpdate
+    - EndGraphicsJobsLate
+    - ParticleSystemBeginUpdateAll
+    - ScriptRunBehaviourLateUpdate
+    - ConstraintManagerUpdate
+    #PostLateUpdate
+    - PlayerSendFrameStarted
+    - DirectorLateUpdate
+    - ScriptRunDelayedDynamicFrameRate
+    - PhysicsSkinnedClothBeginUpdate
+    - UpdateCanvasRectTransform
+    - PlayerUpdateCanvases
+    - UpdateAudio
+    - ParticlesLegacyUpdateAllParticleSystems
+    - ParticleSystemEndUpdateAll
+    - UpdateCustomRenderTextures
+    - UpdateAllRenderers
+    - EnlightenRuntimeUpdate
+    - UpdateAllSkinnedMeshes
+    - ProcessWebSendMessages
+    - SortingGroupsUpdate
+    - UpdateVideoTextures
+    - UpdateVideo
+    - DirectorRenderImage
+    - PlayerEmitCanvasGeometry
+    - PhysicsSkinnedClothFinishUpdate
+    - FinishFrameRendering
+    - BatchModeUpdate
+    - PlayerSendFrameComplete
+    - UpdateCaptureScreenshot
+    - PresentAfterDraw
+    - ClearImmediateRenderers
+    - PlayerSendFramePostPresent
+    - UpdateResolution
+    - InputEndFrame
+    - TriggerEndOfFrameCallbacks
+    - GUIClearEvents
+    - ShaderHandleErrors
+    - ResetInputAxis
+    - ThreadedLoadingDebug
+    - ProfilerSynchronizeStats
+    - MemoryFrameMaintenance
+    - ExecuteGameCenterCallbacks
+    - ProfilerEndFrame
